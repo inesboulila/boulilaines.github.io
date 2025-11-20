@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ines Boulila — Portfolio</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="#about">Ines Boulila</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero py-5" id="about">
+  <div class="container">
+    <div class="row align-items-center">
+
+      <div class="col-lg-7">
+        <h1 class="display-5">Hi, I’m <span class="accent">Ines Boulila</span></h1>
+        <p class="lead mt-3">
+          Software engineering student passionate about building intelligent systems in the AI field — an adaptive learner and a team player who loves turning ideas into clean, functional code.
+        </p>
+
+        <div class="mb-4 mt-3">
+          <strong>Skills:</strong><br>
+          <span class="badge">Web Dev</span>
+          <span class="badge">Python</span>
+          <span class="badge">Java</span>
+          <span class="badge">SQL</span>
+          <span class="badge">React</span>
+          <span class="badge">Machine Learning</span>
+        </div>
+
+        <a class="btn btn-primary me-2" href="#projects">See my projects</a>
+        <a class="btn btn-outline-dark" href="#contact">Contact me</a>
+      </div>
+
+      <div class="col-lg-5 text-center mt-5 mt-lg-0">
+        <div class="avatar-placeholder">IB</div>
+      </div>
+
+    </div>
+  </div>
+</header>
+
+<!-- PROJECTS SECTION -->
+<section id="projects" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="mb-5 text-center">My Projects</h2>
+
+    <div class="row g-4">
+
+      <!-- PROJECT 1 -->
+      <div class="col-md-6 col-lg-3">
+        <div class="project-card p-3 shadow-sm rounded">
+          <img src="https://placehold.co/600x400/6f42c1/FFF?text=Stock+App" class="img-fluid rounded mb-3" alt="Project 1">
+          <h5>Java Stock Management App</h5>
+          <p class="small text-muted">Desktop app using JavaFX + MySQL for product, stock alerts, and reporting.</p>
+          <div class="mt-auto">
+             <span class="badge bg-primary">Java</span>
+             <span class="badge bg-dark">MySQL</span>
+             <span class="badge bg-info text-dark">JavaFX</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROJECT 2 -->
+      <div class="col-md-6 col-lg-3">
+        <div class="project-card p-3 shadow-sm rounded">
+          <img src="https://placehold.co/600x400/6f42c1/FFF?text=Autism+AI" class="img-fluid rounded mb-3" alt="Project 2">
+          <h5>Autism Prediction AI</h5>
+          <p class="small text-muted">ML model predicting autism probability using clinical & behavioral data.</p>
+          <div class="mt-auto">
+             <span class="badge bg-primary">Python</span>
+             <span class="badge bg-dark">HTML</span>
+             <span class="badge bg-dark">CSS</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROJECT 3 -->
+      <div class="col-md-6 col-lg-3">
+        <div class="project-card p-3 shadow-sm rounded">
+          <img src="https://placehold.co/600x400/6f42c1/FFF?text=Inventory" class="img-fluid rounded mb-3" alt="Project 3">
+          <h5>Inventory Web Platform</h5>
+          <p class="small text-muted">Full PHP system to manage, add, edit, delete & search inventory items.</p>
+          <div class="mt-auto">
+             <span class="badge bg-primary">PHP</span>
+             <span class="badge bg-dark">MySQL</span>
+             <span class="badge bg-info text-dark">JS</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROJECT 4 -->
+      <div class="col-md-6 col-lg-3">
+        <div class="project-card p-3 shadow-sm rounded">
+          <img src="https://placehold.co/600x400/6f42c1/FFF?text=MediTrack" class="img-fluid rounded mb-3" alt="Project 4">
+          <h5>MEDITRACK+</h5>
+          <p class="small text-muted">Android app for medication tracking with planned AI chatbot integration.</p>
+          <div class="mt-auto">
+             <span class="badge bg-primary">Java</span>
+             <span class="badge bg-dark">XML</span>
+             <span class="badge bg-info text-dark">NoSQL</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT SECTION -->
+<section id="contact" class="py-5">
+  <div class="container">
+    <h2 class="mb-4 text-center">Contact Me</h2>
+
+    <p class="text-center">
+      Let’s connect! You can reach me here:
+    </p>
+
+    <div class="text-center mb-4">
+      <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/ines-boulila" target="_blank">Ines Boulila</a></p>
+      <p><strong>GitHub:</strong> <a href="https://github.com/inesboulila" target="_blank">inesboulila</a></p>
+      <p><strong>Email:</strong> <a href="mailto:boulilainess@gmail.com">boulilainess@gmail.com</a></p>
+    </div>
+
+    <!-- FORM: Replace YOUR_FORMSPREE_ID below with your actual code -->
+    <form id="contact-form" action="https://formspree.io/f/xvglwjdl" method="POST" class="mt-4 mx-auto" style="max-width: 600px;">
+      <div class="mb-3">
+        <label class="form-label">Your Name</label>
+        <input type="text" name="name" class="form-control" required>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Your Email</label>
+        <input type="email" name="email" class="form-control" required>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Message</label>
+        <textarea name="message" class="form-control" rows="4" required></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary w-100">Send Message</button>
+    </form>
+
+  </div>
+</section>
+
+<!-- BOOTSTRAP + JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
