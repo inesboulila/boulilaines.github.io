@@ -187,3 +187,20 @@ body {
     color: white;
 }
 .glass-input::placeholder { color: rgba(255,255,255,0.5); }
+/* --- PROJECT IMAGES FIX --- */
+.card-visual {
+    padding: 0; /* Remove padding so image fills the corners */
+}
+
+.card-visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures image crops nicely, doesn't stretch */
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+/* Zoom effect on the image when hovering */
+.project-card:hover .card-visual img {
+    transform: scale(1.1);
+}
