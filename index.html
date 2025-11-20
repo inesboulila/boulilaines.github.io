@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Ines Boulila — AI Engineer</title>
+    <title>Ines Boulila — Portfolio</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Icons -->
@@ -23,44 +23,53 @@
 <!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top p-3">
   <div class="container">
-    <a class="navbar-brand fw-bold" href="#">INES.AI</a>
+    <a class="navbar-brand fw-bold" href="#">Ines Boulila</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navMenu">
       <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="#projects">Work</a></li>
+        <li class="nav-item"><a class="nav-link btn btn-glass ms-lg-3 px-4" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link btn btn-glass ms-lg-3 px-4" href="#projects">Projects</a></li>
         <li class="nav-item"><a class="nav-link btn btn-glass ms-lg-3 px-4" href="#contact">Contact</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
-<!-- HERO SECTION -->
+<!-- HERO SECTION (ABOUT) -->
 <header class="min-vh-100 d-flex align-items-center justify-content-center" id="about">
   <div class="container">
     <div class="row justify-content-center">
         <div class="col-lg-10">
-            <!-- The Glass Card -->
+            
+            <!-- GLASS CARD: Same style as Contact now -->
             <div class="glass-card hero-card p-5 text-center">
-                <div class="avatar-box mb-4">IB</div>
+                
+                <!-- AVATAR IMAGE -->
+                <!-- REPLACE THE SRC LINK BELOW WITH YOUR PHOTO LINK -->
+                <img src="https://placehold.co/400x400/6366f1/FFFFFF?text=Your+Photo" 
+                     class="avatar-img mb-4" 
+                     alt="Ines Boulila">
+
                 <h1 class="display-3 fw-bold text-white mb-3">Hi, I'm <span class="text-gradient">Ines Boulila</span></h1>
                 <p class="lead text-white-50 mb-4">
                     Software Engineering Student & AI Enthusiast.<br>
-                    Turning complex data into intelligent solutions.
+                    I love turning data into stories! Data analytics is where my curiosity starts, and AI is where it grows—transforming insights into intelligent solutions that feel almost magical.
                 </p>
                 
-                <!-- Tech Stack Mini-Badges -->
+                <!-- Skills -->
                 <div class="d-flex justify-content-center gap-2 flex-wrap mb-4">
+                    <span class="tech-pill">Web Dev</span>
                     <span class="tech-pill">Python</span>
-                    <span class="tech-pill">Machine Learning</span>
                     <span class="tech-pill">Java</span>
-                    <span class="tech-pill">React</span>
+                    <span class="tech-pill">SQL</span>
+                    <span class="tech-pill">Machine Learning</span>
                 </div>
 
-                <a href="#projects" class="btn btn-glow">View My Work</a>
+                <a href="#projects" class="btn btn-glow">View My Projects</a>
             </div>
+
         </div>
     </div>
   </div>
@@ -69,57 +78,70 @@
 <!-- PROJECTS SECTION -->
 <section id="projects" class="py-5">
   <div class="container">
-    <h2 class="section-title text-center mb-5">Featured Projects</h2>
+    <h2 class="section-title text-center mb-5 text-white">Featured Projects</h2>
 
     <div class="row g-4">
       
       <!-- Project 1 -->
-      <div class="col-md-6 col-lg-4">
+      <div class="col-md-6 col-lg-3">
         <div class="project-card">
             <div class="card-visual visual-1">
                 <h3>Stock Manager</h3>
             </div>
             <div class="card-overlay">
                 <h4>Java Stock App</h4>
-                <p>Desktop app using JavaFX + MySQL for product stock alerts and reporting.</p>
+                <p>Desktop app using JavaFX + MySQL for product stock alerts and reporting.Features: Login, product management, stock alerts, and report generation.</p>
                 <div class="tags">
                     <span>Java</span><span>MySQL</span><span>JavaFX</span>
                 </div>
-                <a href="#" class="btn btn-sm btn-light mt-3">View Code</a>
             </div>
         </div>
       </div>
 
       <!-- Project 2 -->
-      <div class="col-md-6 col-lg-4">
+      <div class="col-md-6 col-lg-3">
         <div class="project-card">
             <div class="card-visual visual-2">
                 <h3>Autism AI</h3>
             </div>
             <div class="card-overlay">
                 <h4>Autism Prediction</h4>
-                <p>ML model predicting autism probability using clinical & behavioral data.</p>
+                <p>ML model predicting autism probability using clinical & behavioral data.Presents interactive questions to the user for a quick and reliable autism calculation</p>
                 <div class="tags">
-                    <span>Python</span><span>ML</span><span>Data Science</span>
+                    <span>Python</span><span>ML</span><span>HTML/CSS</span>
                 </div>
-                <a href="#" class="btn btn-sm btn-light mt-3">View Model</a>
             </div>
         </div>
       </div>
 
       <!-- Project 3 -->
-      <div class="col-md-6 col-lg-4">
+      <div class="col-md-6 col-lg-3">
         <div class="project-card">
             <div class="card-visual visual-3">
                 <h3>Inventory Web</h3>
             </div>
             <div class="card-overlay">
                 <h4>Web Platform</h4>
-                <p>Full PHP system to manage, add, edit, delete & search inventory.</p>
+                <p>complete web system for inventory management, allowing easy management of stock products by adding, modifying, deleting, or searching for items with real-time tracking and a simple, interactive web interface.</p>
                 <div class="tags">
                     <span>PHP</span><span>MySQL</span><span>JS</span>
                 </div>
-                <a href="#" class="btn btn-sm btn-light mt-3">Visit Site</a>
+            </div>
+        </div>
+      </div>
+
+      <!-- Project 4 (ADDED BACK) -->
+      <div class="col-md-6 col-lg-3">
+        <div class="project-card">
+            <div class="card-visual visual-4">
+                <h3>MEDITRACK+</h3>
+            </div>
+            <div class="card-overlay">
+                <h4>Medication App</h4>
+                <p>Android application for tracking medications and vital signs through multiple activities, personalized interfaces, and dynamic data management.Planned integration of an AI chatbot for user assistance.Implementation of fluid navigation between screens, input forms, and a structured interface.</p>
+                <div class="tags">
+                    <span>Java</span><span>XML</span><span>NoSQL</span>
+                </div>
             </div>
         </div>
       </div>
@@ -133,10 +155,13 @@
   <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8 col-lg-6">
+            
+            <!-- GLASS CARD: Matches Hero section style -->
             <div class="glass-card p-5">
-                <h2 class="text-center text-white mb-4">Let's Create Something</h2>
+                <h2 class="text-center text-white mb-4">Let's Connect</h2>
+                <p class="text-center text-white-50 mb-4">Have an idea? I'd love to hear about it.</p>
                 
-                <!-- Formspree Form -->
+                <!-- Form -->
                 <form id="contact-form" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
                     <div class="mb-4">
                         <input type="text" name="name" class="form-control glass-input" placeholder="Your Name" required>
@@ -150,12 +175,14 @@
                     <button type="submit" class="btn btn-glow w-100">Send Message</button>
                 </form>
 
+                <!-- Social Links -->
                 <div class="text-center mt-4 social-links">
-                    <a href="https://linkedin.com/in/ines-boulila" class="text-white mx-2"><i class="bi bi-linkedin"></i></a>
-                    <a href="https://github.com/inesboulila" class="text-white mx-2"><i class="bi bi-github"></i></a>
-                    <a href="mailto:boulilainess@gmail.com" class="text-white mx-2"><i class="bi bi-envelope"></i></a>
+                    <a href="https://www.linkedin.com/in/ines-boulila" target="_blank" class="text-white mx-3 fs-4"><i class="bi bi-linkedin"></i></a>
+                    <a href="https://github.com/inesboulila" target="_blank" class="text-white mx-3 fs-4"><i class="bi bi-github"></i></a>
+                    <a href="mailto:boulilainess@gmail.com" class="text-white mx-3 fs-4"><i class="bi bi-envelope"></i></a>
                 </div>
             </div>
+
         </div>
     </div>
   </div>
