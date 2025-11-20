@@ -13,7 +13,7 @@
 </head>
 <body>
 
-<!-- ANIMATED BACKGROUND SHAPES -->
+<!-- ANIMATED BACKGROUND -->
 <div class="bg-animation">
     <div class="blob blob-1"></div>
     <div class="blob blob-2"></div>
@@ -29,143 +29,217 @@
     </button>
     <div class="collapse navbar-collapse" id="navMenu">
       <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link btn btn-glass ms-lg-3 px-4" href="#about">About</a></li>
-        <li class="nav-item"><a class="nav-link btn btn-glass ms-lg-3 px-4" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+        <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
         <li class="nav-item"><a class="nav-link btn btn-glass ms-lg-3 px-4" href="#contact">Contact</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
-<!-- HERO SECTION (ABOUT) -->
+<!-- 1. HERO SECTION (Cleaned Up) -->
 <header class="min-vh-100 d-flex align-items-center justify-content-center" id="about">
   <div class="container">
     <div class="row justify-content-center">
         <div class="col-lg-10">
-            
-            <!-- GLASS CARD: Same style as Contact now -->
             <div class="glass-card hero-card p-5 text-center">
-                
-                <!-- AVATAR IMAGE -->
-                <!-- REPLACE THE SRC LINK BELOW WITH YOUR PHOTO LINK -->
-                <img src="assets/project5-placeholder.jpg.png" 
-                     class="avatar-img mb-4" 
-                     alt="Ines Boulila">
+                <!-- AVATAR -->
+                <img src="project5-placeholder.jpg" class="avatar-img mb-4" alt="Ines Boulila">
 
                 <h1 class="display-3 fw-bold text-white mb-3">Hi, I'm <span class="text-gradient">Ines Boulila</span></h1>
                 <p class="lead text-white-50 mb-4">
                     Software Engineering Student & AI Enthusiast.<br>
-                    I love turning data into stories! Data analytics is where my curiosity starts, and AI is where it grows transforming insights into intelligent solutions that feel almost magical.
+                    I love turning data into stories! Data analytics is where my curiosity starts, and AI is where it grows—transforming insights into intelligent solutions that feel almost magical.
                 </p>
                 
-                <!-- Skills -->
-                <div class="d-flex justify-content-center gap-2 flex-wrap mb-4">
-                    <span class="tech-pill">Web Dev</span>
-                    <span class="tech-pill">Python</span>
-                    <span class="tech-pill">Java</span>
-                    <span class="tech-pill">SQL</span>
-                    <span class="tech-pill">Machine Learning</span>
+                <!-- Buttons -->
+                <div class="mt-4">
+                    <a href="#projects" class="btn btn-glow me-2">View My Projects</a>
+                    <a href="#skills" class="btn btn-glass">My Tech Stack</a>
                 </div>
-
-                <a href="#projects" class="btn btn-glow">View My Projects</a>
             </div>
-
         </div>
     </div>
   </div>
 </header>
 
-<!-- PROJECTS SECTION -->
+<!-- 2. SKILLS SECTION (New Grid Layout) -->
+<section id="skills" class="py-5">
+    <div class="container">
+        <h2 class="section-title text-center mb-5 text-white">Technical Skills</h2>
+        
+        <div class="row g-4">
+            <!-- Card 1: Programming -->
+            <div class="col-md-6">
+                <div class="glass-card p-4 h-100">
+                    <h4 class="text-gradient mb-3"><i class="bi bi-code-slash me-2"></i>Programming</h4>
+                    <div class="d-flex flex-wrap gap-2">
+                        <span class="tech-pill border-glow">Python (Advanced)</span>
+                        <span class="tech-pill">Java</span>
+                        <span class="tech-pill">C</span>
+                        <span class="tech-pill">PHP</span>
+                        <span class="tech-pill">HTML/CSS</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2: AI & Data -->
+            <div class="col-md-6">
+                <div class="glass-card p-4 h-100">
+                    <h4 class="text-gradient mb-3"><i class="bi bi-cpu me-2"></i>AI & Data Science</h4>
+                    <div class="d-flex flex-wrap gap-2">
+                        <span class="tech-pill">Machine Learning</span>
+                        <span class="tech-pill">NLP</span>
+                        <span class="tech-pill">OpenAI Integration</span>
+                        <span class="tech-pill">Computer Vision</span>
+                        <span class="tech-pill">Data Analytics</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3: Data & Tools -->
+            <div class="col-md-6">
+                <div class="glass-card p-4 h-100">
+                    <h4 class="text-gradient mb-3"><i class="bi bi-database me-2"></i>Data & Cloud</h4>
+                    <div class="d-flex flex-wrap gap-2">
+                        <span class="tech-pill">SQL</span>
+                        <span class="tech-pill">MySQL</span>
+                        <span class="tech-pill">Oracle PL/SQL</span>
+                        <span class="tech-pill">NoSQL</span>
+                        <span class="tech-pill">Hadoop/Spark</span>
+                        <span class="tech-pill">Docker</span>
+                        <span class="tech-pill">Git</span>
+                        <span class="tech-pill">Figma</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4: Languages -->
+            <div class="col-md-6">
+                <div class="glass-card p-4 h-100">
+                    <h4 class="text-gradient mb-3"><i class="bi bi-translate me-2"></i>Languages</h4>
+                    <ul class="list-unstyled text-white-50 mb-0">
+                        <li class="mb-2"><strong>Arabic:</strong> Native</li>
+                        <li class="mb-2"><strong>French:</strong> Fluent</li>
+                        <li class="mb-2"><strong>English:</strong> Fluent</li>
+                        <li><strong>German:</strong> Basic</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 3. EDUCATION SECTION (Timeline) -->
+<section id="education" class="py-5">
+    <div class="container">
+        <h2 class="section-title text-center mb-5 text-white">Education</h2>
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="timeline">
+                    
+                    <!-- Item 1 -->
+                    <div class="timeline-item mb-5">
+                        <div class="timeline-dot"></div>
+                        <div class="glass-card p-4">
+                            <span class="badge bg-primary mb-2">Sep 2023 – Present</span>
+                            <h4 class="text-white">Bachelor's Degree in Computer Science</h4>
+                            <p class="text-gradient mb-0">Higher Institute of Computer Science (ISI) — Ariana</p>
+                            <p class="text-white-50 small mt-2">Specializing in Software Engineering and Information Systems.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="glass-card p-4">
+                            <span class="badge bg-secondary mb-2">Completed</span>
+                            <h4 class="text-white">Baccalaureate Degree in Computer Science</h4>
+                            <p class="text-gradient mb-0">El Wafa — Tunis (El Ghazela)</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 4. PROJECTS SECTION -->
 <section id="projects" class="py-5">
   <div class="container">
     <h2 class="section-title text-center mb-5 text-white">Featured Projects</h2>
-
     <div class="row g-4">
-      
       <!-- Project 1 -->
       <div class="col-md-6 col-lg-3">
         <div class="project-card">
-            <div class="card-visual">
-                <!-- REPLACE src WITH YOUR IMAGE FILENAME -->
-                <img src="assets/project2-placeholder.jpg.png" alt="Stock Management App">
-            </div>
+            <div class="card-visual"><img src="project2-placeholder.jpg" alt="Stock App"></div>
             <div class="card-overlay">
-                <h4>Stock Manager</h4> <!-- Title moved here -->
-                <p class="small">Desktop app using JavaFX + MySQL. Features secure login, real-time stock alerts, product management, and automated PDF reporting.</p>
-                <div class="tags">
-                    <span>Java</span><span>MySQL</span><span>JavaFX</span>
-                </div>
+                <h4>Stock Manager</h4>
+                <p class="small">Desktop app using JavaFX + MySQL. Features secure login, stock alerts, and PDF reporting.</p>
+                <div class="tags"><span>Java</span><span>MySQL</span><span>JavaFX</span></div>
             </div>
         </div>
       </div>
-
       <!-- Project 2 -->
       <div class="col-md-6 col-lg-3">
         <div class="project-card">
-            <div class="card-visual">
-                <!-- REPLACE src WITH YOUR IMAGE FILENAME -->
-                <img src="assets/project3-placeholder.jpg.png" alt="Autism Prediction AI">
-            </div>
+            <div class="card-visual"><img src="project3-placeholder.jpg" alt="Autism AI"></div>
             <div class="card-overlay">
                 <h4>Autism Prediction</h4>
-                <p class="small">ML model predicting autism probability. Uses an interactive questionnaire to analyze clinical & behavioral data for instant results.</p>
-                <div class="tags">
-                    <span>Python</span><span>ML</span><span>Web</span>
-                </div>
+                <p class="small">ML model using interactive questionnaires to analyze clinical data for autism detection.</p>
+                <div class="tags"><span>Python</span><span>ML</span><span>Web</span></div>
             </div>
         </div>
       </div>
-
       <!-- Project 3 -->
       <div class="col-md-6 col-lg-3">
         <div class="project-card">
-            <div class="card-visual">
-                <!-- REPLACE src WITH YOUR IMAGE FILENAME -->
-                <img src="assets/project1-placeholder.jpg.png" alt="Inventory Platform">
-            </div>
+            <div class="card-visual"><img src="project1-placeholder.jpg" alt="Inventory Web"></div>
             <div class="card-overlay">
                 <h4>Inventory Web</h4>
-                <p class="small">Full-stack inventory system. Manage stock, add/edit/delete items, and search products with real-time tracking via a responsive web interface.</p>
-                <div class="tags">
-                    <span>PHP</span><span>MySQL</span><span>JS</span>
-                </div>
+                <p class="small">Full-stack system to add, edit, and search products with real-time tracking.</p>
+                <div class="tags"><span>PHP</span><span>MySQL</span><span>JS</span></div>
             </div>
         </div>
       </div>
-
       <!-- Project 4 -->
       <div class="col-md-6 col-lg-3">
         <div class="project-card">
-            <div class="card-visual">
-                <!-- REPLACE src WITH YOUR IMAGE FILENAME -->
-                <img src="assets/project4-placeholder.jpg.jpg" alt="Meditrack App">
-            </div>
+            <div class="card-visual"><img src="project4-placeholder.jpg" alt="Meditrack"></div>
             <div class="card-overlay">
                 <h4>MEDITRACK+</h4>
-                <p class="small">Android app for tracking meds & vitals. Features fluid navigation, personalized data management, and planned AI chatbot integration.</p>
-                <div class="tags">
-                    <span>Java</span><span>XML</span><span>NoSQL</span>
-                </div>
+                <p class="small">Android app for tracking meds & vitals with fluid navigation and data management.</p>
+                <div class="tags"><span>Java</span><span>XML</span><span>NoSQL</span></div>
             </div>
         </div>
       </div>
-
     </div>
   </div>
 </section>
 
-<!-- CONTACT SECTION -->
-<section id="contact" class="py-5 min-vh-50 d-flex align-items-center">
+<!-- 5. INTERESTS SECTION (New) -->
+<section id="interests" class="py-4">
+    <div class="container text-center">
+        <p class="text-white-50 mb-3 text-uppercase tracking-wide">What I Enjoy</p>
+        <div class="d-flex justify-content-center flex-wrap gap-3">
+            <span class="tech-pill px-4 py-2">Documentaries</span>
+            <span class="tech-pill px-4 py-2">Puzzle Games</span>
+            <span class="tech-pill px-4 py-2">Reading</span>
+            <span class="tech-pill px-4 py-2">New Technology</span>
+        </div>
+    </div>
+</section>
+
+<!-- 6. CONTACT SECTION -->
+<section id="contact" class="py-5 d-flex align-items-center">
   <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8 col-lg-6">
-            
-            <!-- GLASS CARD: Matches Hero section style -->
             <div class="glass-card p-5">
                 <h2 class="text-center text-white mb-4">Let's Connect</h2>
-                <p class="text-center text-white-50 mb-4">Have an idea? I'd love to hear about it.</p>
-                
-                <!-- Form -->
                 <form id="contact-form" action="https://formspree.io/f/xvglwjdl" method="POST">
                     <div class="mb-4">
                         <input type="text" name="name" class="form-control glass-input" placeholder="Your Name" required>
@@ -178,15 +252,12 @@
                     </div>
                     <button type="submit" class="btn btn-glow w-100">Send Message</button>
                 </form>
-
-                <!-- Social Links -->
                 <div class="text-center mt-4 social-links">
                     <a href="https://www.linkedin.com/in/ines-boulila" target="_blank" class="text-white mx-3 fs-4"><i class="bi bi-linkedin"></i></a>
                     <a href="https://github.com/inesboulila" target="_blank" class="text-white mx-3 fs-4"><i class="bi bi-github"></i></a>
                     <a href="mailto:boulilainess@gmail.com" class="text-white mx-3 fs-4"><i class="bi bi-envelope"></i></a>
                 </div>
             </div>
-
         </div>
     </div>
   </div>

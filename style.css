@@ -204,3 +204,39 @@ body {
 .project-card:hover .card-visual img {
     transform: scale(1.1);
 }
+/* --- TIMELINE STYLES --- */
+.timeline {
+    position: relative;
+    padding-left: 30px;
+    border-left: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.timeline-item {
+    position: relative;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -36px; /* Centers dot on the line */
+    top: 20px;
+    width: 14px;
+    height: 14px;
+    background: var(--primary);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--primary);
+}
+
+/* --- SKILLS STYLES --- */
+.border-glow {
+    border: 1px solid var(--primary);
+    box-shadow: 0 0 5px rgba(99, 102, 241, 0.3);
+    font-weight: bold;
+    color: white;
+}
+
+/* --- INTERESTS TEXT --- */
+.tracking-wide {
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
