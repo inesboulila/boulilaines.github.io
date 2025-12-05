@@ -1,48 +1,105 @@
-/* FONT & RESET */
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap');
-
+/* =========================================
+   1. CORE STYLES & EMERALD VARIABLES
+   ========================================= */
 :root {
-    --primary: #6366f1;
-    --secondary: #a855f7;
-    --dark: #0f172a;
-    --glass: rgba(255, 255, 255, 0.05);
-    --glass-border: rgba(255, 255, 255, 0.1);
+    /* OPTION 1: EMERALD DATA THEME */
+    --primary: #10b981;   /* Vibrant Emerald Green */
+    --secondary: #0ea5e9; /* Sky Blue */
+    --dark: #020617;      /* Very Deep Navy/Black */
+    
+    --glass: rgba(255, 255, 255, 0.03);
+    --glass-border: rgba(255, 255, 255, 0.08);
+    --text-main: #f1f5f9;
+    --text-muted: #94a3b8;
 }
 
 body {
     font-family: 'Outfit', sans-serif;
     background-color: var(--dark);
-    color: white;
+    color: var(--text-main);
     overflow-x: hidden;
+    margin: 0;
 }
 
-/* --- ANIMATED BACKGROUND --- */
+/* =========================================
+   2. FULL SCREEN SCROLLING SNAP
+   ========================================= */
+html {
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+
+section, header {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 60px;
+    position: relative;
+    scroll-snap-align: start;
+    box-sizing: border-box;
+}
+
+/* =========================================
+   3. ANIMATED BACKGROUND (UPDATED COLORS)
+   ========================================= */
 .bg-animation {
     position: fixed;
     top: 0; left: 0; width: 100%; height: 100%;
     z-index: -1;
     overflow: hidden;
-    background: #0f172a;
+    background: var(--dark);
 }
 
 .blob {
     position: absolute;
     filter: blur(80px);
-    opacity: 0.6;
+    opacity: 0.5;
     animation: float 10s infinite ease-in-out;
 }
 
-.blob-1 { width: 400px; height: 400px; background: #6366f1; top: -10%; left: -10%; animation-delay: 0s; }
-.blob-2 { width: 300px; height: 300px; background: #a855f7; bottom: 20%; right: -5%; animation-delay: 2s; }
-.blob-3 { width: 350px; height: 350px; background: #ec4899; top: 40%; left: 30%; animation-delay: 4s; }
+/* New Green/Blue Blobs */
+.blob-1 { width: 400px; height: 400px; background: var(--primary); top: -10%; left: -10%; animation-delay: 0s; }
+.blob-2 { width: 300px; height: 300px; background: var(--secondary); bottom: 20%; right: -5%; animation-delay: 2s; }
+.blob-3 { width: 350px; height: 350px; background: #34d399; top: 40%; left: 30%; animation-delay: 4s; }
 
 @keyframes float {
     0%, 100% { transform: translate(0, 0); }
     50% { transform: translate(30px, 50px); }
 }
 
-/* --- GLASSMORPHISM CARDS --- */
-/* Used for both Hero and Contact to ensure consistency */
+/* =========================================
+   4. NAVBAR (CLEAR & UNIFIED)
+   ========================================= */
+.navbar {
+    background: rgba(2, 6, 23, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.8) !important;
+    font-weight: 500;
+    padding: 10px 20px !important;
+    margin: 0 4px;
+    border-radius: 50px;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+/* Hover Glow uses the new Primary Green */
+.navbar-nav .nav-link:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: #fff !important;
+    box-shadow: 0 0 15px rgba(16, 185, 129, 0.4); 
+    transform: translateY(-2px);
+}
+
+/* =========================================
+   5. UI ELEMENTS & BUTTONS
+   ========================================= */
 .glass-card {
     background: var(--glass);
     backdrop-filter: blur(16px);
@@ -52,42 +109,45 @@ body {
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
 }
 
-/* --- HERO SECTION --- */
-.hero-card {
-    animation: levitate 6s ease-in-out infinite;
-}
-
+.hero-card { animation: levitate 6s ease-in-out infinite; }
 @keyframes levitate {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-20px); }
 }
 
+/* Text Gradient (Green -> Blue) */
 .text-gradient {
-    background: linear-gradient(to right, #c084fc, #6366f1);
+    background: linear-gradient(to right, #34d399, #0ea5e9);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
 }
 
-/* --- NEW BIGGER AVATAR --- */
+/* Avatar */
 .avatar-img {
-    width: 140px;  /* Bigger size as requested */
-    height: 140px;
-    object-fit: cover; /* Ensures photo doesn't stretch */
+    width: 150px; height: 150px;
+    object-fit: cover;
     border-radius: 50%;
     border: 4px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 0 30px rgba(99, 102, 241, 0.5);
+    box-shadow: 0 0 30px rgba(16, 185, 129, 0.5); /* Green Glow */
 }
 
+/* Tech Pills */
 .tech-pill {
-    background: rgba(255,255,255,0.1);
-    padding: 5px 15px;
+    background: rgba(255,255,255,0.05);
+    padding: 6px 14px;
     border-radius: 50px;
     font-size: 0.85rem;
     border: 1px solid var(--glass-border);
+    color: rgba(255,255,255,0.9);
+    display: inline-block;
+}
+.border-glow {
+    border-color: var(--primary);
+    box-shadow: 0 0 8px rgba(16, 185, 129, 0.4);
 }
 
-/* --- BUTTONS --- */
+/* Inner Page Buttons (Updated to Green/Blue) */
 .btn-glow {
     background: linear-gradient(90deg, var(--primary), var(--secondary));
     color: white;
@@ -98,23 +158,44 @@ body {
     transition: 0.3s;
 }
 .btn-glow:hover {
-    box-shadow: 0 0 20px rgba(168, 85, 247, 0.6);
+    box-shadow: 0 0 20px rgba(14, 165, 233, 0.6);
     transform: scale(1.05);
     color: white;
 }
-
 .btn-glass {
     background: rgba(255,255,255,0.1);
     color: white;
     border: 1px solid var(--glass-border);
     border-radius: 50px;
+    padding: 12px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
 }
 .btn-glass:hover {
     background: rgba(255,255,255,0.2);
     color: white;
 }
 
-/* --- PROJECT CARDS (4 Column Grid) --- */
+/* =========================================
+   6. TIMELINE & GRIDS
+   ========================================= */
+.timeline {
+    position: relative;
+    padding-left: 30px;
+    border-left: 2px solid rgba(255, 255, 255, 0.1);
+}
+.timeline-item { position: relative; }
+.timeline-dot {
+    position: absolute;
+    left: -37px; top: 20px;
+    width: 16px; height: 16px;
+    background: var(--primary);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--primary);
+}
+
+/* Project Cards */
 .project-card {
     position: relative;
     height: 300px;
@@ -122,56 +203,45 @@ body {
     overflow: hidden;
     cursor: pointer;
     box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    background: #000;
 }
-
-.card-visual {
-    height: 100%; width: 100%;
-    display: flex; align-items: center; justify-content: center;
-    transition: 0.5s;
+.card-visual { width: 100%; height: 100%; padding: 0; }
+.card-visual img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
 }
-
-.card-visual h3 {
-    font-weight: bold;
-    font-size: 1.5rem;
-    text-shadow: 0 2px 10px rgba(0,0,0,0.3);
-    color: white;
-    text-align: center;
-    padding: 0 10px;
-}
-
-/* Gradients for Project Backgrounds */
-.visual-1 { background: linear-gradient(45deg, #FF512F, #DD2476); }
-.visual-2 { background: linear-gradient(45deg, #4facfe, #00f2fe); }
-.visual-3 { background: linear-gradient(45deg, #43e97b, #38f9d7); }
-/* New Gradient for Meditrack */
-.visual-4 { background: linear-gradient(45deg, #f83600, #f9d423); }
-
 .card-overlay {
     position: absolute;
-    bottom: -100%;
-    left: 0; width: 100%; height: 100%;
-    background: rgba(15, 23, 42, 0.95);
+    bottom: -100%; left: 0; width: 100%; height: 100%;
+    background: rgba(2, 6, 23, 0.95);
     backdrop-filter: blur(5px);
     padding: 25px;
     display: flex; flex-direction: column; justify-content: center;
     transition: 0.4s ease-in-out;
 }
-
 .project-card:hover .card-overlay { bottom: 0; }
-.project-card:hover .card-visual { transform: scale(1.1); }
+.project-card:hover .card-visual img { transform: scale(1.1); }
 
 .tags span {
     display: inline-block;
     font-size: 0.75rem;
-    background: #333;
+    background: rgba(255,255,255,0.1);
     padding: 4px 10px;
     border-radius: 4px;
-    margin-right: 5px;
+    margin-right: 5px; margin-top: 5px;
     color: #ccc;
-    margin-top: 5px;
 }
 
-/* --- CONTACT FORM INPUTS --- */
+/* Hover Effects */
+.hover-effect { transition: transform 0.3s ease, background 0.3s ease; }
+.hover-effect:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.08);
+    border-color: var(--primary);
+}
+
+/* Forms */
 .glass-input {
     background: rgba(255, 255, 255, 0.05);
     border: none;
@@ -187,56 +257,3 @@ body {
     color: white;
 }
 .glass-input::placeholder { color: rgba(255,255,255,0.5); }
-/* --- PROJECT IMAGES FIX --- */
-.card-visual {
-    padding: 0; /* Remove padding so image fills the corners */
-}
-
-.card-visual img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensures image crops nicely, doesn't stretch */
-    display: block;
-    transition: transform 0.5s ease;
-}
-
-/* Zoom effect on the image when hovering */
-.project-card:hover .card-visual img {
-    transform: scale(1.1);
-}
-/* --- TIMELINE STYLES --- */
-.timeline {
-    position: relative;
-    padding-left: 30px;
-    border-left: 2px solid rgba(255, 255, 255, 0.1);
-}
-
-.timeline-item {
-    position: relative;
-}
-
-.timeline-dot {
-    position: absolute;
-    left: -36px; /* Centers dot on the line */
-    top: 20px;
-    width: 14px;
-    height: 14px;
-    background: var(--primary);
-    border-radius: 50%;
-    box-shadow: 0 0 10px var(--primary);
-}
-
-/* --- SKILLS STYLES --- */
-.border-glow {
-    border: 1px solid var(--primary);
-    box-shadow: 0 0 5px rgba(99, 102, 241, 0.3);
-    font-weight: bold;
-    color: white;
-}
-
-/* --- INTERESTS TEXT --- */
-.tracking-wide {
-    letter-spacing: 2px;
-    font-size: 0.8rem;
-    font-weight: 700;
-}
