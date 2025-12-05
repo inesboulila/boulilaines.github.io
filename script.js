@@ -1,17 +1,14 @@
-// 1. Mobile Menu Auto-Close
-const navLinks = document.querySelectorAll('.nav-link');
-const menuToggle = document.getElementById('navMenu');
-const bsCollapse = new bootstrap.Collapse(menuToggle, {toggle:false});
-
-navLinks.forEach((l) => {
-    l.addEventListener('click', () => {
-        if(menuToggle.classList.contains('show')){
-            bsCollapse.hide();
-        }
+// Smooth Scroll
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener("click", function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth"
+        });
     });
 });
 
-// 2. Hero Card 3D Tilt Effect
+// Hero Card 3D Tilt Effect
 const heroCard = document.querySelector('.hero-card');
 
 if(heroCard) {
@@ -20,7 +17,7 @@ if(heroCard) {
         const x = e.clientX - rect.left;
         const y = e.clientY - rect.top;
         
-        const xRotation = ((y - rect.height / 2) / rect.height) * 10; 
+        const xRotation = ((y - rect.height / 2) / rect.height) * 10; // Tilt strength
         const yRotation = ((x - rect.width / 2) / rect.width) * 10;
 
         heroCard.style.transform = `
@@ -35,6 +32,7 @@ if(heroCard) {
         heroCard.style.transition = 'transform 0.5s ease';
     });
     
+    // Remove transition when moving so it doesn't lag
     heroCard.addEventListener('mouseenter', () => {
         heroCard.style.transition = 'none';
     });
